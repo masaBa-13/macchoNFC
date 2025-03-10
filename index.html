@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Playwrite+CU:wght@100..400&family=Train+One&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 使用する全リンクを配列に格納
+      const links = [
+        "https://youtu.be/yfF-Q2NhVnE?si=dqKGzyTY_L5PAjO4",
+        "https://youtu.be/No9m0A2tzLw?si=8ds0OlhlX7ED--jL",
+        "https://youtu.be/ORGZQyf95DU?si=YJQW-bfMxb0KBJ4M",
+        "https://youtu.be/5dV8ybKk6ns?si=zZVdNJFY-iHNbJFg",
+        "https://youtu.be/hj2j-RsUiSE?si=-AUlLRwP1fF954oe",
+        "https://youtu.be/n3rwKyLK50M?si=1a_IboK_UnwmWKFZ"
+      ];
+      
+      // リンクをランダムに選択
+      const chosenLink = links[Math.floor(Math.random() * links.length)];
+      console.log("選ばれたリンク:", chosenLink);
+      
+      // ページ本文を1秒間非表示にしてからリダイレクト（ちらつきを防ぐため）
+      const bodyContent = document.querySelector('body');
+      bodyContent.style.visibility = 'hidden';
+      setTimeout(() => {
+        bodyContent.style.visibility = 'visible';
+      }, 1000);
+      
+      // 選ばれたリンクにリダイレクト
+      window.location.href = chosenLink;
+    });
+  </script>
+</head>
+<body>
+  <p>ナイスやる気だ</p>
+  <p>やればできる</p>
+  <p>筋トレ頑張れ！！</p>
+</body>
+</html>
